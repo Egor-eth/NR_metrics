@@ -1,8 +1,7 @@
-from metrics import *
+from metrics_assembled import *
 import cv2
 import os
 from pathlib import Path
-import os
 
 def y_gt_pair(file: str):
     p = Path(file)
@@ -18,7 +17,7 @@ def run_for_each(dir: str, out_file: str):
             img = cv2.imread(os.path.join(dir, y_file))
             img_gt = cv2.imread(os.path.join(dir, gt_file))
 
-            res = metrics_for(img, img_gt)
+            res, _ = metrics_for(img, img_gt)
             print(y_file + ',' + ','.join([x[1] for x in res]), file=f)
     print("Done.")
 
