@@ -1,9 +1,7 @@
 import numpy as np
-from metrics.psnr import psnr_wrapper as psnr
-from metrics.ssim import ssim_wrapper as ssim
-from metrics.lpips import get_lpips_wrapper as get_lpips
+from metrics.wrappers import psnr, ssim, get_lpips_wrapper, flip
 
-METRICS = [("PSNR", psnr), ("SSIM", ssim), ("LPIPS", get_lpips())]
+METRICS = [("PSNR", psnr), ("SSIM", ssim), ("LPIPS", get_lpips_wrapper()), ("FLIP", flip)]
 
 def metric_names():
     return [x[0] for x in METRICS]

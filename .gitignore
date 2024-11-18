@@ -1,2 +1,4 @@
 out/
 .venv/
+scripts/__pycache__/
+scripts/metrics/__pycache__
