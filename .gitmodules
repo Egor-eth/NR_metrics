@@ -1,0 +1,3 @@
+[submodule "ext/nbvh"]
+	path = ext/nbvh
+	url = https://github.com/WeiPhil/nbvh.git
