@@ -16,7 +16,9 @@ if [ -d "$VENV_DIR" ]; then
 fi
 
 if [ ! -f "$VENV_DIR/installed" ]; then
-    pip install numpy scikit-image lpips opencv-python flip-evaluator && touch "$VENV_DIR/installed"
+    pip install numpy scikit-image lpips opencv-python flip-evaluator pyexr && 
+    pip install -r ext/neural_sdf/infra/requirements.txt &&
+    touch "$VENV_DIR/installed"
 
 
     patch ext/nbvh/ext/flip-cuda/common/FLIP.cpp ext/FLIP.cpp.patch
