@@ -1,3 +1,6 @@
 [submodule "ext/nbvh"]
 	path = ext/nbvh
 	url = https://github.com/Egor-eth/nbvh.git
+[submodule "ext/neural_sdf"]
+	path = ext/neural_sdf
+	url = https://github.com/Egor-eth/nglod.git
